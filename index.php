@@ -3,208 +3,271 @@
  * Created by PhpStorm.
  * User: Praktikant.STTINSM
  * Date: 12.07.2016
- * Time: 08:58
+ * Time: 13:52
  */
 
-// TODO -- Includes von JS und CSS (Bootstrap und JQ)
+$html ="";
 
-
-require_once ("class/class_Header.php");
-$html= "";
-
-$html.= "<link rel='stylesheet' href='css/wfPhpTester.css'>";
+/** Bower Components  */
 $html.= "<script src=\"/wfPhpTester/bower_components/jquery/dist/jquery.min.js\"></script>";
+
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/bootstrap/dist/css/bootstrap.min.css\">";
 $html.= " <script src=\"/wfPhpTester/bower_components/bootstrap/dist/js/bootstrap.min.js\"></script>";
-$html.= "<script src=\"/wfPhpTester/bower_components/jquery/dist/jquery.min.js\"></script>";
-$html.= "<script src=\"script/main.js\"></script>";
 
-
-$html.="
-
-</a>
-<button class=\"btn btn-primary\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
-  Button with data-target
-</button>
-<div class=\"collapse\" id=\"collapseExample\">
-  <div class=\"well\">
-    Tic Tac Toe is suppa!!!
-  </div>
-</div>
-<div class=\"panel-group\" id=\"accordion\" role=\"tablist\" aria-multiselectable=\"true\">
-  <div class=\"panel panel-default\">
-    <div class=\"panel-heading\" role=\"tab\" id=\"headingOne\">
-      <h4 class=\"panel-title\">
-        <a role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseOne\" aria-expanded=\"true\" aria-controls=\"collapseOne\">
-          Warum mein Tic Tac Toe das Beste ist
-        </a>
-      </h4>
-    </div>
-    <div id=\"collapseOne\" class=\"panel-collapse collapse in\" role=\"tabpanel\" aria-labelledby=\"headingOne\">
-      <div class=\"panel-body\">
-       Weil es mit verschiedenen Gamemodes kommt und mit vier verschiedenen Schwierigkeitsstufen.
-       Es gib außerdem einen Multiplayer-Modus!
-      </div>
-    </div>
-  </div>
-  <div class=\"panel panel-default\">
-    <div class=\"panel-heading\" role=\"tab\" id=\"headingTwo\">
-      <h4 class=\"panel-title\">
-        <a class=\"collapsed\" role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\">
-          Tic TAc Toe
-        </a>
-      </h4>
-    </div>
-    <div id=\"collapseTwo\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\">
-      <div class=\"panel-body\">
-        Nur das Beste für ihr Kind! ;)
-      </div>
-    </div>
-  </div>
-  <div class=\"panel panel-default\">
-    <div class=\"panel-heading\" role=\"tab\" id=\"headingThree\">
-      <h4 class=\"panel-title\">
-        <a class=\"collapsed\" role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\" aria-expanded=\"false\" aria-controls=\"collapseThree\">
-          Tic Tac Toe
-        </a>
-      </h4>
-    </div>
-    <div id=\"collapseThree\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\">
-      <div class=\"panel-body\">
-        Bei Risiken und Nebenwirkungen lesen sie die Packungsbeilage oder fragen sie Arzt oder Apotheker. Batterien nicht imbegriffen!!!
-      </div>
-    </div>
-  </div>
-</div>
-<div class=\"btn-group\" data-toggle=\"buttons\">
-  <label class=\"btn btn-primary active\">
-    <input type=\"radio\" name=\"options\" id=\"option1\" autocomplete=\"off\" checked> Tic
-  </label>
-  <label class=\"btn btn-primary\">
-    <input type=\"radio\" name=\"options\" id=\"option2\" autocomplete=\"off\"> Tac
-  </label>
-  <label class=\"btn btn-primary\">
-    <input type=\"radio\" name=\"options\" id=\"option3\" autocomplete=\"off\"> Toe
-  </label>
-</div>
-<button type=\"button\" class=\"btn btn-default\" data-toggle=\"tooltip\" data-placement=\"left\" title=\"Tooltip on left\">Tic Tac Toe</button>
-<button type=\"button\" class=\"btn btn-default\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Tooltip on top\">Toe Tac Tic</button>
-<button type=\"button\" class=\"btn btn-default\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Tooltip on bottom\">Tac Tic Toe</button>
-<button type=\"button\" class=\"btn btn-default\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Tooltip on right\">Tic Toe Tac</button>
-<button type=\"button\" class=\"btn btn-default\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Tooltip on right\">Tac Toe Tic</button>
-<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\">
-  <div class=\"modal-dialog\">
-    <div class=\"modal-content\">
-      <div class=\"modal-header\">
-        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-        <h4 class=\"modal-title\">Modal title</h4>
-      </div>
-      <div class=\"modal-body\">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class=\"modal-footer\">
-        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
-        <button type=\"button\" class=\"btn btn-primary\">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\".bs-example-modal-lg\">Large modal</button>
-<div class=\"modal fade bs-example-modal-lg\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\">
-  <div class=\"modal-dialog modal-lg\">
-    <div class=\"modal-content\">
-      O Mane
-    </div>
-  </div>
-</div>
-<button type=\"button\" class=\"btn btn-danger btn-lg\"  data-toggle=\"modal\" data-target=\".bs-example-modal-sm\">
-<span class='glyphicon glyphicon-alert'></span> Dei Pc is hi</button>
-<div class=\"modal fade bs-example-modal-sm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
-  <div class=\"modal-dialog modal-sm\">
-    <div class=\"modal-content\">
-      It's a prank!
-    </div>
-  </div>
-</div>
-<div class=\"dropdown\">
-  <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">
-    Dropdown
-    <span class=\"caret\"></span>
-  </button>
-  <ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu1\">
-    <li><a href=\"#\">Action</a></li>
-    <li><a href=\"#\">Another action</a></li>
-    <li><a href=\"#\">Something else here</a></li>
-    <li role=\"separator\" class=\"divider\"></li>
-    <li><a href=\"#\">Separated link</a></li>
-  </ul>
-</div>
-
-<!-- Single button -->
-<div class=\"btn-group\">
-  <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-    Action <span class=\"caret\"></span>
-  </button>
-  <ul class=\"dropdown-menu\">
-    <li><a href=\"#\">Action</a></li>
-    <li><a href=\"#\">Another action</a></li>
-    <li><a href=\"#\">Something else here</a></li>
-    <li role=\"separator\" class=\"divider\"></li>
-    <li><a href=\"#\">Separated link</a></li>
-  </ul>
-</div>
-
-<div class=\"btn-group\">
-  <button class=\"btn btn-default btn-lg dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-    Large button <span class=\"caret\"></span>
-  </button>
-  <ul class=\"dropdown-menu\">
-    :)
-  </ul>
-</div>
-
-<!-- Small button group -->
-<div class=\"btn-group\">
-  <button class=\"btn btn-default btn-sm dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-    Small button <span class=\"caret\"></span>
-  </button>
-  <ul class=\"dropdown-menu\">
-                :)
-  </ul>
-</div>
-
-<!-- Extra small button group -->
-<div class=\"btn-group\">
-  <button class=\"btn btn-default btn-xs dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-    Extra small button <span class=\"caret\"></span>
-  </button>
-  <ul class=\"dropdown-menu\">
-    :)
-  </ul>
-</div>
-
-<div class=\"input-group input-group-lg\">
-  <span class=\"input-group-addon\" id=\"sizing-addon1\">@</span>
-  <input type=\"text\" class=\"form-control\" placeholder=\"Username\" aria-describedby=\"sizing-addon1\">
-</div>
-
-<div class=\"input-group\">
-  <span class=\"input-group-addon\" id=\"sizing-addon2\">@</span>
-  <input type=\"text\" class=\"form-control\" placeholder=\"Passwort\" aria-describedby=\"sizing-addon2\">
-</div>
-
-<div class=\"input-group input-group-sm\">
-  <span class=\"input-group-addon\" id=\"sizing-addon3\">@</span>
-  <input type=\"text\" class=\"form-control\" placeholder=\"bestätige Passwort\" aria-describedby=\"sizing-addon3\">
-</div>
+$html.= " <script src=\"/wfPhpTester/bower_components/angular/angular.min.js\"></script>";
 
 
 
+/** UserComponents  */
+$html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/main.css\">";
+$html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/sideMenue.css\">";
+$html.= "<script src=\"/wfPhpTester/script/sideMenue.js\"></script>";
+/** UserComponents - NG App  */
+$html.= "<script src=\"/wfPhpTester/script/controller/app.js\"></script>";
+$html.= "<script src=\"/wfPhpTester/script/controller/index.js\"></script>";
 
-
-
-
-
-";
 print $html;
+
+
+
+/** Page Content */
+?>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body ng-controller=CtrlIndex>
+<h1 class="Header" href="#">WebFactory</h1>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">SomSoft</a>
+    </div>
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Home</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#page1">Page 1</a></li>
+            <li><a href="#page2">Page 2</a></li>
+            <!-- Trennstrich == class ="divider"-->
+            <li class="divider"></li>
+
+<!-- 2. Dropdown-Feld-->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#page1">Page 1</a></li>
+                    <li><a href="#page2">Page 2</a></li>
+                    <!-- Trennstrich == class ="divider"-->
+                    <li class="divider"></li>
+
+                    <li><a href="#"><input type=text ng-></a></li>
+                </ul>
+            </li>
+
+
+
+            <li><a href="#"><input type=text ng-></a></li>
+        </ul>
+    </li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+</div>
+</nav>
+<div class="container">
+    <div class="panel-group">
+        <div class="panel panel-primary">
+        <div class="panel-heading">Content</div>
+        <div class="panel-body">
+
+            <label>Hallo Text</label><br>
+            <input type=text ng-model='txtHallo' >{{ txtHallo }}
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-5">
+                    <form novalidate role=form id="userForm" name="userForm">
+                        <div class="form-group">
+                            <label>Vorname</label>
+                            <input
+                                required
+                                name='Vorname'
+                                type="text"
+                                class="form-control"
+                                ng-model="users.Vorname"
+                                placeholder="Vorname">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nachname</label>
+                            <input
+                                required
+                                name='Nachname'
+                                type="text"
+                                class="form-control"
+                                ng-model="users.Nachname"
+                                placeholder="Nachname">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Adresse</label>
+                            <input
+                                required
+                                name='Adresse'
+                                type="text"
+                                class="form-control"
+                                ng-model="users.Adresse"
+                                placeholder="Adresse">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary" ng-hide="attrView" type="button" ng-click="eintragen()" ng-disabled="userForm.$invalid">Eintragen</button>
+                        </div>
+
+                        <div class='well well-lg'> {{ users }}</div>
+                    </form>
+                </div>
+
+                <div class="col-lg-5">
+                    <table class="table-bordered table-hover table-condensed">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th> Vorname </th>
+                            <th> Nachname </th>
+                            <th> Adresse </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in userData">
+                            <td><button class="btn btn-success btn-xs glyphicon glyphicon-edit" ng-click="" title="Bearbeiten"></button></td>
+                            <td>{{ item.Vorname }}</td>
+                            <td>{{ item.Nachname }}</td>
+                            <td>{{ item.Adresse }}</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    <ul class="nav sidebar-nav">
+    <li class="sidebar-brand">
+        <a href="#">
+            WebFactory
+        </a>
+    </li>
+    <li>
+        <a href="#">Home</a>
+    </li>
+    <li>
+        <a href="#">About</a>
+    </li>
+    <li>
+        <a href="#">Events</a>
+    </li>
+    <li>
+        <a href="#">Team</a>
+    </li>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="unter">
+                <li class="dropdown-header">Dropdown heading</li>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown">
+
+                    <!-- Unterordner in der 3. Ebene -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <div class="unter">
+                            <li class="dropdown-header">Dropdown heading</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+<!-- Unterordner in der 3. Ebene -->
+
+
+
+        </ul>
+    </li>
+    <li>
+        <a href="#">Services</a>
+    </li>
+    <li>
+        <a href="#">Contact</a>
+    </li>
+    <li>
+        <a href="">Follow me</a>
+    </li>
+    </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+        <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->
+
+</div>
+</body>
+
+
+
+
+
+
 
