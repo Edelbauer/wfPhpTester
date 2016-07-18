@@ -4,7 +4,8 @@
 "use strict";
 
 /** Angular APP starten  */
-var app = angular.module("app",['app.version','app.index']);
+
+var app = angular.module("app",['app.version','app.index','ngRoute']);
 
 var intervallId;
 var version;
@@ -36,6 +37,22 @@ intervallId = setInterval(function () {
     }
 },100);
 
+app.config(function ($routeProvider)
+{
+    $routeProvider
+        .when('/page1', {
+        templateUrl: '/wfPhpTester/views/Page1/page1.html',
+        controller: 'CtrlPage1'
+        })
+        .when('/page2', {
+            templateUrl: '/wfPhpTester/views/Page2/page2.html',
+            controller: 'CtrlPage2'
+        })
+        .otherwise({
+            redictTo: '/#'
+
+        });
+});
 
 
 

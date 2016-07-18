@@ -8,8 +8,7 @@ var page1;
 /**
  * Index Controller
  */
-page1 = angular.module("app.page1",[])
-    .controller('CtrlPage1',function ($scope,$log) {
+page1 = index.controller('CtrlPage1',function ($scope,$log) {
         $log.debug("Page1 Controller wurde geladen");
 
         /** UserData Array  */
