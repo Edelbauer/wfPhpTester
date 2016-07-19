@@ -10,25 +10,32 @@ $html ="";
 
 /** Bower Components  */
 $html.= "<script src=\"/wfPhpTester/bower_components/jquery/dist/jquery.min.js\"></script>";
+
+$html.="<script src=\"/wfPhpTester/bower_components/jquery-ui/jquery-ui.min.js\"></script>";
+$html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/jquery-ui/themes/dark-hive/jquery-ui.min.css\">";
+
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/bootstrap/dist/css/bootstrap.min.css\">";
 $html.= " <script src=\"/wfPhpTester/bower_components/bootstrap/dist/js/bootstrap.min.js\"></script>";
 
 $html.= "<script src=\"/wfPhpTester/bower_components/angular/angular.min.js\"></script>";
 $html.="<script src=\"/wfPhpTester/bower_components/angular-route/angular-route.min.js\"></script>";
 
+$html.="<script src=\"/wfPhpTester/bower_components/angular-awesome-slider/dist/angular-awesome-slider.js\"></script>";
+$html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/angular-awesome-slider/dist/css/angular-awesome-slider.min.css\">";
 
 /** UserComponents  */
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/main.css\">";
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/dashboard.css\">";
 
 /** UserComponents - NG App   controller*/
-$html.= "<script src=\"/wfPhpTester/script/controller/app.js\"></script>";
+$html.=   "<script src=\"/wfPhpTester/script/controller/app.js\"></script>";
+$html.=   "<script src=\"/wfPhpTester/script/controller/directives.js\"></script>";
 $html.= "<script src=\"/wfPhpTester/script/controller/index.js\"></script>";
 
 /** Seite 1 */
 $html.= "<script src=\"/wfPhpTester/views/Page1/page1.js\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/Page2/page2.js\"></script>";
-
+$html.= "<script src=\"/wfPhpTester/views/Page3/page3.js\"></script>";
 
 print $html;
 /** Page Content (html)*/
@@ -49,17 +56,18 @@ print $html;
     <li class="active"><a href="#">Home</a></li>
     <li><a href="#page1">Page 1</a></li>
     <li><a href="#page2">Page 2</a></li>
+        <li><a href="#page3">Page 3</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
 </div>
 </nav>
-
 <div class="container">
-        <div class="panel-group">
+    <div class="panel-group">
             <div class="panel panel-primary">
                 <div class="panel-heading">Content</div>
+               <div id="slider"></div>
                 <div class="panel-body" ng-view><!-- Achtung wird von NG erstellt -->></div>
             </div>
     </div>

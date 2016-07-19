@@ -5,7 +5,7 @@
 
 /** Angular APP starten  */
 
-var app = angular.module("app",['app.version','app.index','ngRoute']);
+var app = angular.module("app",['app.version','app.index','ngRoute','angularAwesomeSlider']);
 
 var intervallId;
 var version;
@@ -48,11 +48,16 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/Page2/page2.html',
             controller: 'CtrlPage2'
         })
+        .when('/page3', {
+            templateUrl: '/wfPhpTester/views/Page3/page3.html',
+            controller: 'CtrlPage3'
+        })
         .otherwise({
             redictTo: '/#'
 
         });
 });
+
 
 
 

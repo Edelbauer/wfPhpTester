@@ -18,14 +18,11 @@ index = angular.module("app.index",[])
         /** UserData Item */
         $scope.users = {};
 
+
+
         /** Button eintragen */
         $scope.eintragen = function () {
             $scope.userData.push($scope.users);
             $scope.users={};
         };
-
-
     });
-
-
-

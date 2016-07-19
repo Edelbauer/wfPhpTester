@@ -10,8 +10,15 @@ var page2;
  */
 page2 =  index.controller('CtrlPage2',function ($scope,$log) {
     $log.debug("Page2 Controller wurde geladen");
+    $scope.sliderValue = 50;
+    $scope.daten = 25;
 
-
-
-
+    $scope.options = {
+        from:0,
+        to:100,
+        step:1,
+        realtime:true
+    };
 });
+
+

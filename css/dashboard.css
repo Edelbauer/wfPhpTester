@@ -14,7 +14,7 @@ Auslastung*/
 *Produzierten Stücke
 **/
 .stuecke{
-
+width: 100%;
     box-shadow: 15px 15px 0 orange;
 
 }
@@ -38,7 +38,7 @@ Auslastung*/
     font-weight: 400;
 }
 .box-v2 .panel-body{
-    background: #E30049;
+    background: #333;
     color: #fff;
     line-height: 0;
     padding-bottom: 30px;

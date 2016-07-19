@@ -1,6 +1,14 @@
 
 <!-- start: content -->
 <div id="content" class="content">
+    <wf-app-name></wf-app-name>
+
+    <input ng-model="sliderValue" type="text" id="mySlider" slider options="options" />
+
+
+    <wf-dash-panel ng-model="sliderValue" name="Slider..." wf-group ="asdfasdf"></wf-dash-panel>
+    <wf-dash-panel ng-model="daten" name="Daten..."></wf-dash-panel>
+
     <div class="col-md-12" style="padding:20px;">
         <div class="col-md-12 padding-0">
             <div class="col-md-8 padding-0">
@@ -18,49 +26,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 padding-0">
-                    <div class="col-md-6">
-                        <div class="panel box-v1">
-                            <div class="panel-heading bg-white border-none">
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
-                                    <h4 class="text-left"><br>Auslastung</h4>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                    <h4>
-                                        <span class="icon-user icons icon text-right"></span>
-                                    </h4>
-                                </div>
-                            </div>
-
-
-                            <div class="panel-body text-center">
-                                <h1>1%</h1>
-                                <p>Maschine 1</p>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel box-v1">
-                            <div class="panel-heading bg-white border-none">
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
-                                    <h4 class="text-left"><br>Auslastung2</h4>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                    <h4>
-                                        <span class="icon-basket-loaded icons icon text-right"></span>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="panel-body text-center">
-                                <h1>{{data.Auslastung2}}99%</h1>
-                                <p>Maschine 2</p>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <div class="col-md-4">
                 <div class="col-md-12 padding-0">
@@ -69,7 +34,7 @@
 
                             <div class="box-v2-detail">
 
-                                <h4>Akihiko Avaron</h4>
+
                             </div>
                         </div>
                         <!--Feld-->
@@ -96,5 +61,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>
