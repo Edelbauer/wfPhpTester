@@ -52,6 +52,10 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/Page3/page3.html?' + new Date().getTime(),
             controller: 'CtrlPage3'
         })
+        .when('/charts', {
+            templateUrl: '/wfPhpTester/views/charts/charts.html?' + new Date().getTime(),
+            controller: 'CtrlCharts'
+        })
         .otherwise({
             redictTo: '/#'
 

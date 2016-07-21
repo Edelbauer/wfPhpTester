@@ -17,8 +17,8 @@ app.directive("wfAppName",function (appName) {
 app.directive("wfDashPanel",function () {
     return{
         scope : {
-            ngModel : "=ngModel"
-
+            ngModel : "=ngModel",
+            dbName : "@"
         },
 
 
@@ -44,18 +44,14 @@ app.directive("wfDashPanel",function () {
 app.directive("wfDashPanel2",function () {
     return{
         scope : {
-            ngModel : "=ngModel"
+            ngModel : "=ngModel",
+            dbName : "@"
 
         },
-
-
         controller : function ($scope) {
             $scope.label = "Hier sollte der Name stehen";
             $scope.gruppe="HHier sollte die Gruppe stehen";
         },
-
-
-
         templateUrl : "/wfPhpTester/templates/wfDashPanel2.html",
         link : function ($scope,$element,$attrs) {
         }
@@ -63,6 +59,31 @@ app.directive("wfDashPanel2",function () {
 });
 
 
+/**
+ * charts (page4)
+ */
+app.directive("wfDashChart",function () {
+    return{
+        scope : {
+            ngModel : "=ngModel",
+            chartName :"@"
+        },
+        controller : function ($scope) {
 
+        },
+        link: function (scope,element,attr) {
+            console.log(scope);
+            /* Init Chart Canvas */
+            var chartObj = $('#' + scope.chartName)[0].getContext("2d");
+
+
+            new Chart(chartObj).Doughnut(scope.ngModel, {
+                responsive : true,
+                showTooltips: true
+            });
+        },
+        templateUrl : "/wfPhpTester/templates/wfDashPanelChart.html"
+    };
+});
 
 

@@ -23,6 +23,16 @@ $html.="<script src=\"/wfPhpTester/bower_components/angular-route/angular-route.
 $html.="<script src=\"/wfPhpTester/bower_components/angular-awesome-slider/dist/angular-awesome-slider.js\"></script>";
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/angular-awesome-slider/dist/css/angular-awesome-slider.min.css\">";
 
+/** ChartDashBoard */
+$html.= "
+    <script src=\"/wfPhpTester/bower_components/ChartDashBoard/js/moment.min.js\"></script>
+    <script src=\"/wfPhpTester/bower_components/ChartDashBoard/js/chart.min.js\"></script>
+    <script src=\"/wfPhpTester/bower_components/ChartDashBoard/js/jquery.nicescroll.js\"></script>
+
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/bower_components/ChartDashBoard/css/font-awesome.min.css\"/>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/bower_components/ChartDashBoard/css/animate.min.css\"/>
+";
+
 /** UserComponents  */
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/main.css\">";
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/dashboard.css\">";
@@ -32,10 +42,12 @@ $html.=   "<script src=\"/wfPhpTester/script/controller/app.js\"></script>";
 $html.=   "<script src=\"/wfPhpTester/script/controller/directives.js\"></script>";
 $html.= "<script src=\"/wfPhpTester/script/controller/index.js\"></script>";
 
-/** Seite 1 */
-$html.= "<script src=\"/wfPhpTester/views/Page1/page1.js\"></script>";
-$html.= "<script src=\"/wfPhpTester/views/Page2/page2.js\"></script>";
-$html.= "<script src=\"/wfPhpTester/views/Page3/page3.js\"></script>";
+/** Views Controller  */
+$html.= "<script src=\"/wfPhpTester/views/Page1/page1.js?".date("msec")."\"></script>";
+$html.= "<script src=\"/wfPhpTester/views/Page2/page2.js?".date("msec")."\"></script>";
+$html.= "<script src=\"/wfPhpTester/views/Page3/page3.js?".date("msec")."\"></script>";
+$html.= "<script src=\"/wfPhpTester/views/charts/charts.js?".date("msec")."\"></script>";
+
 
 print $html;
 /** Page Content (html)*/
@@ -57,7 +69,9 @@ print $html;
     <li><a href="#page1">Page 1</a></li>
     <li><a href="#page2">Page 2</a></li>
         <li><a href="#page3">Page 3</a></li>
+        <li><a href="#charts">Page 4</a></li>
     </ul>
+
     <ul class="nav navbar-nav navbar-right">
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
