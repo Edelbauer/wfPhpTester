@@ -1,5 +1,61 @@
 <!-- start: content -->
 <div id="content" class="content">
     <wf-app-name></wf-app-name>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Wert1</th>
+                    <th>Wert2</th>
+                    <th>Wert3</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="item in arrayDataJson">
+                    <td><button class="btn btn-xs btn-danger" ng-click="showData(item)"><span class="glyphicon glyphicon-yen"></span></button></td>
+                    <td>{{ item.Wert1 }}</td>
+                    <td>{{ item.Wert2 }}</td>
+                    <td>{{ item.Wert3 }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-5" ng-show="showDetail">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Wert 1</label>
+                    <div class="col-lg-3">
+                        <input type="text" ng-model="detailData.Wert1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Wert 2</label>
+                    <div class="col-lg-3">
+                        <input type="text" ng-model="detailData.Wert2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Wert 3</label>
+                    <div class="col-lg-3">
+                        <input type="text" ng-model="detailData.Wert3">
+                    </div>
+                </div>
+                <button class="btn btn-xs btn-danger" ng-click="closeDetail()"><span class="glyphicon glyphicon-hand-left"></span></button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
     <wf-dash-panel2 ng-model="daten" name="Daten..."></wf-dash-panel2>
+
+
+
+
 </div>

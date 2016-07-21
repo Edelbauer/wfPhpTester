@@ -41,15 +41,15 @@ app.config(function ($routeProvider)
 {
     $routeProvider
         .when('/page1', {
-        templateUrl: '/wfPhpTester/views/Page1/page1.html',
+        templateUrl: '/wfPhpTester/views/Page1/page1.html?' + new Date().getTime(),
         controller: 'CtrlPage1'
         })
         .when('/page2', {
-            templateUrl: '/wfPhpTester/views/Page2/page2.html',
+            templateUrl: '/wfPhpTester/views/Page2/page2.html?' + new Date().getTime(),
             controller: 'CtrlPage2'
         })
         .when('/page3', {
-            templateUrl: '/wfPhpTester/views/Page3/page3.html',
+            templateUrl: '/wfPhpTester/views/Page3/page3.html?' + new Date().getTime(),
             controller: 'CtrlPage3'
         })
         .otherwise({
