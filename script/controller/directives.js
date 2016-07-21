@@ -18,15 +18,51 @@ app.directive("wfDashPanel",function () {
     return{
         scope : {
             ngModel : "=ngModel"
+
         },
+
+
         controller : function ($scope) {
-            $scope.label = "Da muss der Name stehen";
+            $scope.label = "Hier sollte der Name stehen";
+            $scope.gruppe="HHier sollte die Gruppe stehen";
         },
+
+
+
         templateUrl : "/wfPhpTester/templates/wfDashPanel.html",
         link : function ($scope,$element,$attrs) {
-
-
-
         }
     };
 });
+
+
+
+/**
+ *Page 3
+ **/
+
+app.directive("wfDashPanel2",function () {
+    return{
+        scope : {
+            ngModel : "=ngModel"
+
+        },
+
+
+        controller : function ($scope) {
+            $scope.label = "Hier sollte der Name stehen";
+            $scope.gruppe="HHier sollte die Gruppe stehen";
+        },
+
+
+
+        templateUrl : "/wfPhpTester/templates/wfDashPanel2.html",
+        link : function ($scope,$element,$attrs) {
+        }
+    };
+});
+
+
+
+
+
