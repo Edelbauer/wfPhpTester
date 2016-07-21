@@ -1,0 +1,25 @@
+.nummern{
+    background-color: #333;
+color: #96f226;
+width: 75px;
+    height: 75px;
+    font-size: 35px;
+    font-weight: lighter;
+    margin: 1px;
+
+}
+
+.null{
+width: 150;
+}
+
+
+.enter{
+
+height: 225;
+    font-size: 20px;
+}
+
+.zurueck{
+font-size: 20px !important;
+}

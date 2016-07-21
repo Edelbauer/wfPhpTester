@@ -86,4 +86,23 @@ app.directive("wfDashChart",function () {
     };
 });
 
+/**
+ * WfNumPad
+ */
+app.directive("wfNumPad",function () {
+    return{
+        scope : {
+            ngModel : "=ngModel"
+        },
+        controller : function ($scope) {
+
+        },
+        link: function (scope,element,attr) {
+            console.log(scope);
+
+        },
+        templateUrl : "/wfPhpTester/templates/wfNumPad.html"
+    };
+});
+
 
