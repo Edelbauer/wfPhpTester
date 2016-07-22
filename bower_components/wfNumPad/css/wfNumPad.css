@@ -7,7 +7,13 @@ width: 75px;
     font-weight: lighter;
     margin: 1px;
 
+
 }
+
+.nummern:hover{
+    color: orange;
+}
+
 
 .null{
 width: 155;
