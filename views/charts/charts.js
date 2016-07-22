@@ -40,24 +40,11 @@ charts =  index.controller('CtrlCharts',function ($scope,$log) {
             highlight: "#15BA67",
             label: "X"
         }
-
     ];
-
     $scope.Var=10;
-/*
-    /!* Init Chart Canvas *!/
-    var chartObj = $('#chartObj2')[0].getContext("2d");
-    new Chart(chartObj).Doughnut($scope.chartValues, {
-        responsive : true,
-        showTooltips: true
-    });
-*/
-
-
     $scope.onEnter= function () {
         alert("Enter");
     };
-
     $scope.onClear= function () {
         alert("Clear");
     }
