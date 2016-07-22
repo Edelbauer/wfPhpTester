@@ -89,7 +89,8 @@ app.directive("wfDashChart",function () {
 /**
  * WfNumPad
  */
-app.directive("wfNumPad",function () {
+app.directive("wfNumPad",function ($log) {
+
     return{
         scope : {
             ngModel : "=ngModel"
@@ -97,12 +98,30 @@ app.directive("wfNumPad",function () {
         controller : function ($scope) {
 
         },
-        link: function (scope,element,attr) {
-            console.log(scope);
 
-        },
-        templateUrl : "/wfPhpTester/templates/wfNumPad.html"
-    };
+        templateUrl : "/wfPhpTester/templates/wfNumPad.html",
+
+        link: function (scope,emem,attr){
+
+          var btns = elem[0].querySelektorAll ('[name="btnNum"]');
+            var btnEnter = elem[0].querySelectorAll('[name="btnEnter"]');
+            var value =scope.ngModel;
+
+            $(btns).on("click",function(){
+                value = $(this).val();
+                scope.$allpy(function(){
+                    scope.ngModel += value;
+                });
+
+            });
+            $(btnEnter).on("click",function(){
+               scope.fireEnter();
+            });
+        }
+
+
+    }
+
 });
 
 

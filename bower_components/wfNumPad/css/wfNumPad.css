@@ -10,16 +10,24 @@ width: 75px;
 }
 
 .null{
-width: 150;
+width: 155;
 }
 
 
 .enter{
-
-height: 225;
-    font-size: 20px;
+    font-size: 20px !important;
 }
 
 .zurueck{
 font-size: 20px !important;
+}
+
+
+.numpad{
+
+
+padding: 30px;
+
+width: 100%;
+    background-color: #96f226;
 }
