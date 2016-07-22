@@ -100,7 +100,11 @@ app.directive("wfNumPad",function ($log) {
                 scope.fireEnter();
             });
             $(btnClear).on("click",function(){
-                scope.fireClear();
+                var h=scope.ngModel;
+                scope.$apply(function(){
+                    var b = h.substring(0, h.length-1);
+                    scope.ngModel=b;
+                });
             });
         }
     };
