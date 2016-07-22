@@ -85,7 +85,7 @@ print $html;
     <div class="panel-group">
             <div class="panel panel-primary">
                 <div class="panel-heading">Content</div>
-               <div id="slider"></div>
+                <div id="slider"></div>
                 <div class="panel-body" ng-view><!-- Achtung wird von NG erstellt Nicht hineinschreiben!!!!!!-->></div>
             </div>
     </div>

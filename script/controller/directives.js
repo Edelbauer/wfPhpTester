@@ -1,8 +1,7 @@
 /**
  * Created by Praktikant.STTINSM on 19.07.2016.
  */
-
-/***
+/**
  * AppName
  */
 app.directive("wfAppName",function (appName) {
@@ -10,8 +9,7 @@ app.directive("wfAppName",function (appName) {
         template : "<div class='well well-sm'><h4>" + appName + "</h4></div>"
     };
 });
-
-/***
+/**
  * Dashboard Panel
  */
 app.directive("wfDashPanel",function () {
@@ -20,33 +18,23 @@ app.directive("wfDashPanel",function () {
             ngModel : "=ngModel",
             dbName : "@"
         },
-
-
         controller : function ($scope) {
             $scope.label = "Hier sollte der Name stehen";
             $scope.gruppe="HHier sollte die Gruppe stehen";
         },
-
-
-
         templateUrl : "/wfPhpTester/templates/wfDashPanel.html",
         link : function ($scope,$element,$attrs) {
         }
     };
 });
-
-
-
 /**
  *Page 3
  **/
-
 app.directive("wfDashPanel2",function () {
     return{
         scope : {
             ngModel : "=ngModel",
             dbName : "@"
-
         },
         controller : function ($scope) {
             $scope.label = "Hier sollte der Name stehen";
@@ -57,8 +45,6 @@ app.directive("wfDashPanel2",function () {
         }
     };
 });
-
-
 /**
  * charts (page4)
  */
@@ -69,14 +55,11 @@ app.directive("wfDashChart",function () {
             chartName :"@"
         },
         controller : function ($scope) {
-
         },
         link: function (scope,element,attr) {
             console.log(scope);
             /* Init Chart Canvas */
             var chartObj = $('#' + scope.chartName)[0].getContext("2d");
-
-
             new Chart(chartObj).Doughnut(scope.ngModel, {
                 responsive : true,
                 showTooltips: true
@@ -85,43 +68,40 @@ app.directive("wfDashChart",function () {
         templateUrl : "/wfPhpTester/templates/wfDashPanelChart.html"
     };
 });
-
 /**
  * WfNumPad
  */
 app.directive("wfNumPad",function ($log) {
-
     return{
         scope : {
-            ngModel : "=ngModel"
+            ngModel : "=ngModel",
+            fireEnter : "&onEnter",
+            fireClear : "&onClear"
         },
         controller : function ($scope) {
-
         },
-
         templateUrl : "/wfPhpTester/templates/wfNumPad.html",
 
-        link: function (scope,emem,attr){
-
-          var btns = elem[0].querySelektorAll ('[name="btnNum"]');
-            var btnEnter = elem[0].querySelectorAll('[name="btnEnter"]');
+        link: function (scope,elem,attr){
+            /*Select alle elemente mit namen evtBtn*/
+          var btns = elem[0].querySelectorAll('[name="bntNum"]');
+            var btnEnter = elem[0].querySelectorAll('[name="bntEnter"]');
+            var btnClear = elem[0].querySelectorAll('[name="bntClear"]');
             var value =scope.ngModel;
-
+            $log.debug(btns);
             $(btns).on("click",function(){
+                $log.debug(btns);
                 value = $(this).val();
-                scope.$allpy(function(){
+                scope.$apply(function(){
                     scope.ngModel += value;
                 });
-
             });
             $(btnEnter).on("click",function(){
-               scope.fireEnter();
+                scope.fireEnter();
+            });
+            $(btnClear).on("click",function(){
+                scope.fireClear();
             });
         }
-
-
-    }
-
+    };
 });
-
-
