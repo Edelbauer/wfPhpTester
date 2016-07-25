@@ -56,6 +56,10 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/charts/charts.html?' + new Date().getTime(),
             controller: 'CtrlCharts'
         })
+        .when('/json', {
+            templateUrl: '/wfPhpTester/views/json/json.html?' + new Date().getTime(),
+            controller: 'CtrlCharts'
+        })
         .otherwise({
             redictTo: '/#'
 

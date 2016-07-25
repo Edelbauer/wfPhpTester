@@ -23,3 +23,20 @@ function syntaxHighlight(json) {
         return '<span class="' + cls + '">' + match + '</span>';
     });
 }
+
+/**
+ * Dieser Code soll formatiert werden:
+ * @type {{employees: *[]}}
+ */
+var json=
+{"employees": [{
+    "firstName": "John",
+    "lastName": "Doe"
+}, {
+    "firstName": "Anna",
+    "lastName": "Smith"
+}, {
+    "firstName": "Peter",
+    "lastName": "Jones"
+}]
+};
