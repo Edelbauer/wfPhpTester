@@ -56,13 +56,13 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/charts/charts.html?' + new Date().getTime(),
             controller: 'CtrlCharts'
         })
-        .when('/json', {
-            templateUrl: '/wfPhpTester/views/json/json.html?' + new Date().getTime(),
-            controller: 'CtrlCharts'
+        .when('/jsonDbg', {
+            templateUrl: '/wfPhpTester/views/Page5/jsonDbg.html?' + new Date().getTime(),
+            test:  'var testJson = {"employees": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Anna", "lastName": "Smith"}, {"firstName": "Peter", "lastName": "Jones"}]}',
+            controller: 'CtrJsonDbg'
         })
         .otherwise({
             redictTo: '/#'
-
         });
 });
 
