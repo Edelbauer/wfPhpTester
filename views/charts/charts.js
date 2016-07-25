@@ -45,7 +45,5 @@ charts =  index.controller('CtrlCharts',function ($scope,$log) {
     $scope.onEnter= function () {
         alert("Enter");
     };
-    $scope.onClear= function () {
-        alert("Clear");
-    }
+
 });

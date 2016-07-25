@@ -1,3 +1,7 @@
+
+/**
+css von allen Nummern
+*/
 .nummern{
     background-color: #333;
     color: #96f226;
@@ -13,19 +17,23 @@
     color: orange;
     transition: all 0.7s ;
 }
-
+/**
+css von 0*/
 .null{
-    width: 155;
+    width: 155px;
 }
-
+/**
+css von Enter*/
 .enter{
     font-size: 20px !important;
 }
-
+/**
+css von Clear*/
 .zurueck{
     font-size: 20px !important;
 }
-
+/**
+css vom Numpad*/
 .numpad{
     padding: 30px;
     width: 100%;

@@ -75,8 +75,7 @@ app.directive("wfNumPad",function ($log) {
     return{
         scope : {
             ngModel : "=ngModel",
-            fireEnter : "&onEnter",
-            fireClear : "&onClear"
+            fireEnter : "&onEnter"
         },
         controller : function ($scope) {
         },
@@ -99,6 +98,9 @@ app.directive("wfNumPad",function ($log) {
             $(btnEnter).on("click",function(){
                 scope.fireEnter();
             });
+            /**
+             * Der String wird um die letzte Stelle veringert
+             */
             $(btnClear).on("click",function(){
                 var h=scope.ngModel;
                 scope.$apply(function(){
