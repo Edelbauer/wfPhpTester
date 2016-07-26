@@ -1,5 +1,3 @@
-
-
 /**
 Überschrift
 **/
@@ -14,31 +12,22 @@
     height: 80px;
     margin: 0 !important;
 }
-
-
 .unter{
     color:white;
 }
 .navbar-nav > li > .dropdown-menu
 {
     background-color: #333333;
-
 }
 .dropdown-menu>li>a {
-
     color: white !important;
-
 }
-
 #mainContent {
     position:fixed;
     top: 135px;
-
     overflow: scroll;
     height: 87%;
 }
-
-
 /**
 *Menüleiste
 */
@@ -55,10 +44,3 @@
     padding-left: 10px !important;
     padding-top:10px !important;
 }
-
-
-
-
-
-
-
