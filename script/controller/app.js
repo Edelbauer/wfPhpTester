@@ -61,6 +61,11 @@ app.config(function ($routeProvider)
             test:  'var testJson = {"employees": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Anna", "lastName": "Smith"}, {"firstName": "Peter", "lastName": "Jones"}]}',
             controller: 'CtrJsonDbg'
         })
+        .when('/login', {
+            templateUrl: '/wfPhpTester/views/login/login.html?' + new Date().getTime(),
+
+            controller: 'Ctrlogin'
+        })
         .otherwise({
             redictTo: '/#'
         });

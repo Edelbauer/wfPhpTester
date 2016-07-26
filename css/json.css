@@ -9,25 +9,25 @@ span {font-size: 18px; font-weight: 700; display:block; text-indent:100px}
 .key { color: red; }
 
 .eklammerzu{
-
+text-indent: 50px;
 }
 
 .punkt{
-
+    text-indent: 70px;
 }
 .beistrich{
-
+    text-indent: 100px;
 }
 
 .eklammerauf{
-
+    text-indent: 50px;
 }
 
 .gklammerauf{
-
+    text-indent: 70px;
 }
 
 .gklammerzu{
-
+    text-indent: 70px;
 }
 

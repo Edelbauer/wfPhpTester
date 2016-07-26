@@ -74,6 +74,7 @@ print $html;
         <li><a href="#page3">Page 3</a></li>
         <li><a href="#charts">Page 4</a></li>
         <li><a href="#jsonDbg">Page 5</a></li>
+        <li><a href="#login">Page 6</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
