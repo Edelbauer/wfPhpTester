@@ -130,9 +130,15 @@ app.directive("wfJsonDbg",function ($log) {
 
             function syntaxHighlight(json) {
                 if (typeof json != 'string') {
-                    json = JSON.stringify(json, undefined, 2);
+                    json = JSON.stringify(json, undefined, 2).replace(/{/g,"<span class ='gklammerauf'>{</span>");
+                    json=json.replace(/[[]/g,"<span class='eklammerauf'>[</span>");
+                    json=json.replace(/[}]/g,"<span class='gklammerzu'>}</span>");
+                    json=json.replace(/[.]/g,"<span class='punkt'>.</span>");
+                    json=json.replace(/[,]/g,"<span class='beistrich'>,</span>");
+                    json=json.replace(/[\]]/g,"<span class='eklammerzu'>]</span>");
                 }
-                json=json.replace("{","<span>{</span>");
+                console.log(json);
+
 
 
                 //json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
