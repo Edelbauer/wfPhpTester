@@ -42,6 +42,9 @@ charts =  index.controller('CtrlCharts',function ($scope,$log) {
         }
     ];
     $scope.Var=10;
+
+    $scope.json = 0;
+
     $scope.onEnter= function () {
         alert("Enter");
     };

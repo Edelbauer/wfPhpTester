@@ -48,6 +48,7 @@ $html.= "<script src=\"/wfPhpTester/views/Page2/page2.js?".date("msec")."\"></sc
 $html.= "<script src=\"/wfPhpTester/views/Page3/page3.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/charts/charts.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/json/json.js?".date("msec")."\"></script>";
+$html.= "<script src=\"/wfPhpTester/views/Page5/jsonDbg.js?".date("msec")."\"></script>";
 
 
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/wfNumPad/css/wfNumPad.css\">";
@@ -72,7 +73,7 @@ print $html;
     <li><a href="#page2">Page 2</a></li>
         <li><a href="#page3">Page 3</a></li>
         <li><a href="#charts">Page 4</a></li>
-        <li><a href="#json">Page 5</a></li>
+        <li><a href="#jsonDbg">Page 5</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">

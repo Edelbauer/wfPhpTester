@@ -1,0 +1,37 @@
+
+
+<!-- Einbinden der css -->
+<link rel="stylesheet" href="/wfPhpTester/css/json.css">
+
+<script>
+    var testJson = {"employees": [{
+        "firstName": "John",
+        "lastName": "Doe"
+    }, {
+        "firstName": "Anna",
+        "lastName": "Smith"
+    }, {
+        "firstName": "Peter",
+        "lastName": "Jones"
+    }]
+    }
+</script>
+
+
+
+<div id="content" class="content">
+    <wf-app-name></wf-app-name>
+    <wf-json-dbg style="width: 100px; height: 100px; border: 1px solid red;" id="test" ng-model="json">{{json}}</wf-json-dbg>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

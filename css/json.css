@@ -1,5 +1,7 @@
 
 pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+
+span {font-size: 18px; font-weight: 700; display:block; text-indent:100px}
 .string { color: green; }
 .number { color: darkorange; }
 .boolean { color: blue; }
