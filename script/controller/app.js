@@ -63,7 +63,6 @@ app.config(function ($routeProvider)
         })
         .when('/login', {
             templateUrl: '/wfPhpTester/views/login/login.html?' + new Date().getTime(),
-
             controller: 'Ctrlogin'
         })
         .otherwise({
