@@ -69,12 +69,13 @@ print $html;
     </div>
     <ul class="nav navbar-nav">
     <li class="active"><a href="#">Home</a></li>
-    <li><a href="#page1">Page 1</a></li>
-    <li><a href="#page2">Page 2</a></li>
-        <li><a href="#page3">Page 3</a></li>
-        <li><a href="#charts">Page 4</a></li>
-        <li><a href="#jsonDbg">Page 5</a></li>
-        <li><a href="#login">Page 6</a></li>
+    <li><a href="#page1">Registrieren</a></li>
+    <li><a href="#page2">Dashboard</a></li>
+        <li><a href="#page3">Werte eintragen</a></li>
+        <li><a href="#charts">NumPad</a></li>
+        <li><a href="#jsonDbg">JSON</a></li>
+        <li><a href="#login">login</a></li>
+        <li><a href="#diagramm">diagramm</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
