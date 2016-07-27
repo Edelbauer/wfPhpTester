@@ -69,6 +69,10 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/diagramm/diagramm.html?' + new Date().getTime(),
             controller: 'Ctrdiagramm'
         })
+        .when('/diagramm2', {
+            templateUrl: '/wfPhpTester/views/diagramm2/diagramm2.html?' + new Date().getTime(),
+            controller: 'Ctrdiagramm2'
+        })
         .otherwise({
             redictTo: '/#'
         });
