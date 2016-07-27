@@ -51,6 +51,8 @@ $html.= "<script src=\"/wfPhpTester/views/charts/charts.js?".date("msec")."\"></
 $html.= "<script src=\"/wfPhpTester/views/json/json.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/Page5/jsonDbg.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\"></script>";
+$html.= "<script src=\"/wfPhpTester/views/diagramm2/diagramm2.js?".date("msec")."\"></script>";
+$html.= "<script src=\"/wfPhpTester/views/diagramm3/diagramm3.js?".date("msec")."\"></script>";
 
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/wfNumPad/css/wfNumPad.css\">";
 print $html;
@@ -78,6 +80,8 @@ print $html;
         <li><a href="#jsonDbg">JSON</a></li>
         <li><a href="#login">login</a></li>
         <li><a href="#diagramm">diagramm</a></li>
+        <li><a href="#diagramm2">diagramm2</a></li>
+        <li><a href="#diagramm3">diagramm3</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
