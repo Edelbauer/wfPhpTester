@@ -49,7 +49,7 @@ $html.= "<script src=\"/wfPhpTester/views/Page3/page3.js?".date("msec")."\"></sc
 $html.= "<script src=\"/wfPhpTester/views/charts/charts.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/json/json.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/Page5/jsonDbg.js?".date("msec")."\"></script>";
-
+$html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\"></script>";
 
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/wfNumPad/css/wfNumPad.css\">";
 print $html;

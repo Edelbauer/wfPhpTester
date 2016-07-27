@@ -1,3 +1,10 @@
+"use strict";
+var charts;
 /**
- * Created by Praktikant.STTINSM on 27.07.2016.
+ * Index Controller
  */
+charts =  index.controller('Ctrdiagramm',function ($scope,$log) {
+    $log.debug("diagramm Controller wurde geladen");
+});
+
+
