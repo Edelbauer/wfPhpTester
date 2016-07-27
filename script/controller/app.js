@@ -73,7 +73,3 @@ app.config(function ($routeProvider)
             redictTo: '/#'
         });
 });
-
-
-
-
