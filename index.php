@@ -42,6 +42,7 @@ $html.=   "<script src=\"/wfPhpTester/script/controller/app.js\"></script>";
 $html.=   "<script src=\"/wfPhpTester/script/controller/directives.js\"></script>";
 $html.= "<script src=\"/wfPhpTester/script/controller/index.js\"></script>";
 
+$html.= "<script src=\"/wfPhpTester/bower_components/d3/d3.js?".date("msec")."\"></script>";
 /** Views Controller  */
 $html.= "<script src=\"/wfPhpTester/views/Page1/page1.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/Page2/page2.js?".date("msec")."\"></script>";
@@ -54,6 +55,7 @@ $html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/wfNumPad/css/wfNumPad.css\">";
 print $html;
 /** Page Content (html)*/
+
 ?>
 <html lang="en">
 <head>
