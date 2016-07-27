@@ -155,16 +155,9 @@ app.directive("wfJsonDbg",function ($log) {
                     return '<span class="' + cls + '">' + match + '</span>';
                 });
             }
-
             $scope.ngBindHtml = $sce.trustAsHtml(syntaxHighlight(test));
-
         },
         link: function (scope,elem,attr){
-
-
-
-
-
         }
     };
 });
