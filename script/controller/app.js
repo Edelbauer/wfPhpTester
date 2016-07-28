@@ -77,6 +77,7 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/diagramm3/diagramm3.html?' + new Date().getTime(),
             controller: 'Ctrdiagramm3'
         })
+
         .otherwise({
             redictTo: '/#'
         });
