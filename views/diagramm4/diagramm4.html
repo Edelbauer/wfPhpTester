@@ -1,38 +1,54 @@
 <div class="content">
     <button name="bntNum" value="hallo" class="btn btn-lg  nummern array" onclick="arr2()">neue Zahl erstellen</button>
 </div>
+<div id="chartContainer"></div>
     <script type = "text/javascript" >
+        var anders = [];
 
-            var dataPoints = [{y : 10}, {y : 13}, {y : 18}, {y : 20}, {y : 17}];
-            var chart = new CanvasJS.Chart("chartContainer", {
-                title : {
-                    text : "Dynamic Data"
-                },
-                data : [{
-                    type : "spline",
-                    dataPoints : dataPoints
-                }
-                ]
-            });
 
-            chart.render();
+function dia4(){
 
-            var yVal = 15, updateCount = 0;
-            var updateChart = function () {
+    function arr(){
+        var i;
+        //Die ersten 20 Ziffern werden generiert
+        for (i=0;i<20;i++){
+            var json = { x: i, y: Math.floor((Math.random() * 10)) };
+            anders.push(json);
+        }
+        console.log(anders);
+    }
 
-                yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-                updateCount++;
 
-                dataPoints.push({
-                    y : yVal
-                });
+    function arr2(){
 
-                chart.options.title.text = "Update " + updateCount;
-                chart.render();
+        //das 21. Zeichen wird generiert, und das 1. wird abgeschnitten
 
-            };
+        var count = anders[19].x;
+        var json = { x: ++count ,y: Math.floor((Math.random() * 10))};
+        anders.push(json);
+        anders.shift();
+        console.log(anders);
+        chart.render();
+    }
+    arr();
+    //var dataPoints = anders;
+    var chart = new CanvasJS.Chart("chartContainer", {
+        title : {
+            text : "Dynamic Data"
+        },
+        data : [{
+            type : "spline",
+            dataPoints : anders
+        }
+        ]
+    });
+
+    chart.render();
+
+}
+
 
             // update chart every second
-            setInterval(function(){updateChart()}, 1000);
+
 
     </script>
