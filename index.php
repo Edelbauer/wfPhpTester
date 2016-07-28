@@ -82,7 +82,6 @@ print $html;
         <li><a href="#jsonDbg">JSON</a></li>
         <li><a href="#login">login</a></li>
         <li><a href="#diagramm">diagramm</a></li>
-
         <li><a href="#diagramm2">diagramm2</a></li>
         <li><a href="#diagramm3">diagramm3</a></li>
     </ul>
