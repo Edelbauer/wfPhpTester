@@ -1,53 +1,53 @@
 <div class="content">
-    <button name="bntNum" value="hallo" class="btn btn-lg  nummern array" onclick="arr2()">neue Zahl erstellen</button>
+    <button name="bntNum" value="hallo" class="btn btn-lg  nummern array" onclick="dia4(5)">neue Zahl erstellen</button>
 </div>
 <div id="chartContainer"></div>
     <script type = "text/javascript" >
-        var anders = [];
+        var dataArray =[];
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title : {
+                text : "Dynamic Data"
+            },
+            data : [{
+                type : "spline",
+                dataPoints : dataArray
+            }
+          ]
+        });
 
+        var start = function () {
 
-function dia4(){
+            var wsImpl = window.WebSocket || window.MozWebSocket;
 
-    function arr(){
-        var i;
-        //Die ersten 20 Ziffern werden generiert
-        for (i=0;i<20;i++){
-            var json = { x: i, y: Math.floor((Math.random() * 10)) };
-            anders.push(json);
+            window.ws = new wsImpl('ws://localhost:8181/');
+
+            ws.onmessage = function (evt) {
+console.log(evt.data);
+
+                dia4(Number(evt.data));
+            };
+
+        };
+start();
+
+function dia4(newValue){
+
+    var count = 0;
+
+        if (dataArray.length==0){
+            dataArray[0]={ x:0, y:newValue };
+        }else{
+            count = dataArray[dataArray.length -1].x;
         }
-        console.log(anders);
-    }
 
-    function arr2(){
+        var json = { x: ++count ,y:newValue};
+    console.log(json);
+        dataArray.push(json);
+        if (dataArray.length>19){
+            dataArray.shift();
+        }
 
-        //das 21. Zeichen wird generiert, und das 1. wird abgeschnitten
-
-        var count = anders[19].x;
-        var json = { x: ++count ,y: Math.floor((Math.random() * 10))};
-        anders.push(json);
-        anders.shift();
-        console.log(anders);
         chart.render();
-    }
-    arr();
-    //var dataPoints = anders;
-    var chart = new CanvasJS.Chart("chartContainer", {
-        title : {
-            text : "Dynamic Data"
-        },
-        data : [{
-            type : "spline",
-            dataPoints : anders
-        }
-        ]
-    });
-
-    chart.render();
 
 }
-
-
-            // update chart every second
-
-
     </script>
