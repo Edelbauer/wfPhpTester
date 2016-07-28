@@ -50,7 +50,7 @@ $html.= "<script src=\"/wfPhpTester/views/Page3/page3.js?".date("msec")."\"></sc
 $html.= "<script src=\"/wfPhpTester/views/charts/charts.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/json/json.js?".date("msec")."\"></script>";
 
-$html.="<script src=\"http://canvasjs.com/assets/script/canvasjs.min.js?".date("msec")."\"></script>";
+$html.="<script src=\"/wfPhpTester/script/controller/canvasjs.min.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/Page5/jsonDbg.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm2/diagramm2.js?".date("msec")."\"></script>";
