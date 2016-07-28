@@ -49,6 +49,8 @@ $html.= "<script src=\"/wfPhpTester/views/Page2/page2.js?".date("msec")."\"></sc
 $html.= "<script src=\"/wfPhpTester/views/Page3/page3.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/charts/charts.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/json/json.js?".date("msec")."\"></script>";
+
+$html.="<script src=\"http://canvasjs.com/assets/script/canvasjs.min.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/Page5/jsonDbg.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm2/diagramm2.js?".date("msec")."\"></script>";
@@ -80,6 +82,7 @@ print $html;
         <li><a href="#jsonDbg">JSON</a></li>
         <li><a href="#login">login</a></li>
         <li><a href="#diagramm">diagramm</a></li>
+
         <li><a href="#diagramm2">diagramm2</a></li>
         <li><a href="#diagramm3">diagramm3</a></li>
     </ul>
