@@ -56,10 +56,17 @@ $html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\
 $html.= "<script src=\"/wfPhpTester/views/diagramm2/diagramm2.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm3/diagramm3.js?".date("msec")."\"></script>";
 
+
+
+//Diese Dateien dienen nur zu Testzecken (Diagramm4- und Array-Dateinamen)
+$html.= "<script src=\"/wfPhpTester/views/diagramm4/array.js?".date("msec")."\"></script>";
+$html.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/views/diagramm4/array.css\"/>";
+
+    //fdstfgetgh
+
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/wfNumPad/css/wfNumPad.css\">";
 print $html;
 /** Page Content (html)*/
-
 ?>
 <html lang="en">
 <head>
@@ -74,7 +81,7 @@ print $html;
         <a class="navbar-brand" href="#">SomSoft</a>
     </div>
     <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Home</a></li>
+
     <li><a href="#page1">Registrieren</a></li>
     <li><a href="#page2">Dashboard</a></li>
         <li><a href="#page3">Werte eintragen</a></li>
@@ -84,6 +91,7 @@ print $html;
         <li><a href="#diagramm">diagramm</a></li>
         <li><a href="#diagramm2">diagramm2</a></li>
         <li><a href="#diagramm3">diagramm3</a></li>
+        <li><a href="#diagramm4">diagramm4</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
