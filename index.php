@@ -57,10 +57,8 @@ $html.= "<script src=\"/wfPhpTester/views/diagramm2/diagramm2.js?".date("msec").
 $html.= "<script src=\"/wfPhpTester/views/diagramm3/diagramm3.js?".date("msec")."\"></script>";
 
 
-
-//Diese Dateien dienen nur zu Testzecken (Diagramm4- und Array-Dateinamen)
-$html.= "<script src=\"/wfPhpTester/views/diagramm4/array.js?".date("msec")."\"></script>";
-$html.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/views/diagramm4/array.css\"/>";
+$html.= "<script src=\"/wfPhpTester/views/diagramm4/diagramm4.js?".date("msec")."\"></script>";
+$html.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/views/diagramm4/diagramm4.css\"/>";
 
     //fdstfgetgh
 
