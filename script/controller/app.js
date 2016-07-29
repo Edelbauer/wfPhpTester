@@ -4,31 +4,22 @@
 "use strict";
 
 /** Angular APP starten  */
-
 var app = angular.module("app",['app.version','app.index','ngRoute','angularAwesomeSlider']);
-
 var intervallId;
 var version;
-
-
 /* NG Version Controller */
 version = angular.module("app.version",[]);
 version.config(function ($provide) {
     $provide.constant("appName","WebFactory - Angular");
     $provide.constant("version","1.5");
     $provide.constant("author","@Sommer Patrik");
-    
 });
-
-
 /* NG App startet */
 app.run(function (appName,version,author,$rootScope,$templateCache) {
     console.info(appName);
     console.info(version);
     console.info(author);
 });
-
-
 /* Autom .Bootstrap */
 intervallId = setInterval(function () {
     if(/loaded|complete/i.test(document.readyState)){
@@ -36,7 +27,6 @@ intervallId = setInterval(function () {
         clearInterval(intervallId);
     }
 },100);
-
 app.config(function ($routeProvider)
 {
     $routeProvider
@@ -81,7 +71,6 @@ app.config(function ($routeProvider)
             templateUrl: '/wfPhpTester/views/diagramm4/diagramm4.html?' + new Date().getTime(),
             controller: 'Ctrdiagramm4'
         })
-
         .otherwise({
             redictTo: '/#'
         });
