@@ -8,7 +8,6 @@ var charts;
  */
 charts =  index.controller('CtrlCharts',function ($scope,$log) {
     $log.debug("Charts Controller wurde geladen");
-
     $scope.chartValues = [
         {
             value: 100,

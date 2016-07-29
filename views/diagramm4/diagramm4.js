@@ -9,4 +9,3 @@ var charts;
 charts =  index.controller('Ctrdiagramm4',function ($scope,$log) {
     $log.debug("diagramm4 Controller wurde geladen");
 });
-
