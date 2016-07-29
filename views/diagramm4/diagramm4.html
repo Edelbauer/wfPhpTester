@@ -14,7 +14,6 @@
             }
           ]
         });
-
         var start = function () {
 
             var wsImpl = window.WebSocket || window.MozWebSocket;
@@ -26,14 +25,10 @@ console.log(evt.data);
 
                 dia4(Number(evt.data));
             };
-
         };
 start();
-
 function dia4(newValue){
-
     var count = 0;
-
         if (dataArray.length==0){
             dataArray[0]={ x:0, y:newValue };
         }else{
@@ -46,8 +41,6 @@ function dia4(newValue){
         if (dataArray.length>19){
             dataArray.shift();
         }
-
         chart.render();
-
 }
     </script>

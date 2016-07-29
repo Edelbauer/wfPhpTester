@@ -81,7 +81,6 @@ print $html;
         <a class="navbar-brand" href="#">SomSoft</a>
     </div>
     <ul class="nav navbar-nav">
-
     <li><a href="#page1">Registrieren</a></li>
     <li><a href="#page2">Dashboard</a></li>
         <li><a href="#page3">Werte eintragen</a></li>
