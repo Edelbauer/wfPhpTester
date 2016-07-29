@@ -32,7 +32,6 @@ $html.= "
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/bower_components/ChartDashBoard/css/font-awesome.min.css\"/>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/bower_components/ChartDashBoard/css/animate.min.css\"/>
 ";
-
 /** UserComponents  */
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/main.css\">";
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/css/dashboard.css\">";
@@ -56,11 +55,8 @@ $html.= "<script src=\"/wfPhpTester/views/diagramm/diagramm.js?".date("msec")."\
 $html.= "<script src=\"/wfPhpTester/views/diagramm2/diagramm2.js?".date("msec")."\"></script>";
 $html.= "<script src=\"/wfPhpTester/views/diagramm3/diagramm3.js?".date("msec")."\"></script>";
 
-
 $html.= "<script src=\"/wfPhpTester/views/diagramm4/diagramm4.js?".date("msec")."\"></script>";
-$html.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/views/diagramm4/diagramm4.css\"/>";
-
-    //fdstfgetgh
+$html.= "<link rel=\"stylesheet\" type=\"text/css\" href=\"/wfPhpTester/css/diagramm4.css\"/>";
 
 $html.= "<link rel=\"stylesheet\" href=\"/wfPhpTester/bower_components/wfNumPad/css/wfNumPad.css\">";
 print $html;
@@ -79,16 +75,16 @@ print $html;
         <a class="navbar-brand" href="#">SomSoft</a>
     </div>
     <ul class="nav navbar-nav">
-    <li><a href="#page1">Registrieren</a></li>
-    <li><a href="#page2">Dashboard</a></li>
-        <li><a href="#page3">Werte eintragen</a></li>
-        <li><a href="#charts">NumPad</a></li>
-        <li><a href="#jsonDbg">JSON</a></li>
-        <li><a href="#login">login</a></li>
-        <li><a href="#diagramm">diagramm</a></li>
-        <li><a href="#diagramm2">diagramm2</a></li>
-        <li><a href="#diagramm3">diagramm3</a></li>
-        <li><a href="#diagramm4">diagramm4</a></li>
+         <li><a href="#page1">Registrieren</a></li>
+         <li><a href="#page2">Dashboard</a></li>
+         <li><a href="#page3">Werte eintragen</a></li>
+         <li><a href="#charts">NumPad</a></li>
+         <li><a href="#jsonDbg">JSON</a></li>
+         <li><a href="#login">login</a></li>
+         <li><a href="#diagramm">diagramm</a></li>
+         <li><a href="#diagramm2">diagramm2</a></li>
+         <li><a href="#diagramm3">diagramm3</a></li>
+         <li><a href="#diagramm4">diagramm4</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
